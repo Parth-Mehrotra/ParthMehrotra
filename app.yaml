@@ -12,17 +12,40 @@ handlers:
 - url: /js
   static_dir: js
 
+#6
 - url: /commingsoon1
   static_files: commingsoon1.html
   upload: commingsoon1.html
 
+#5
 - url: /commingsoon2
   static_files: commingsoon2.html
   upload: commingsoon2.html
 
+#4
 - url: /plexx
   static_files: plexx.html
   upload: plexx.html
+
+#3
+- url: /sinfulcolors
+  static_files: sinfulcolors.html
+  upload: sinfulcolors.html
+
+#2
+- url: /neweatsnewyork
+  static_files: neweatsnewyork.html
+  upload: neweatsnewyork.html
+
+#1
+- url: /skylight1
+  static_files: skylight1.html
+  upload: skylight1.html
+
+#0
+- url: /martialartsscorekeeper
+  static_files: martialartsscorekeeper.html
+  upload: martialartsscorekeeper.html
 
 - url: /(.*)
   static_files: \1
