@@ -6,35 +6,53 @@
 		<link href='http://fonts.googleapis.com/css?family=Lobster|Roboto:100' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
 	</head>
 	<body>
+		<div id="spacer">
+		</div>
 		<header>
 			<img src="img/parthmehrotra.jpg" alt="Picture of Parth Mehrotra" id="propic" >
 			<h1>Parth Mehrotra</h1>
 		</header>
+		<div id="container">
+			<div class="item"><a href="commingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
+			<div class="item"><a href="commingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
+			<div class="item"><a href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
+			<div class="item"><a href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
+			<div class="item"><a href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
+			<div class="item"><a href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
+			<div class="item"><a href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
+		</div>	
 		<hr id="line">
-		<nav>
-			<ul>
-				<li>
-					<a>Software</a>
-				</li>
-				<li>
-					<a>Hardware</a>
-				</li>
-				<li>
-					<a>Education</a>
-				</li>
-				<li>
-					<a>Photography</a>
-				</li>
-			</ul>
-		</nav>
-		<section id="commingsoon">
-			<p>Coming Soon</p>
-		</section>
+
 		<footer>
 			<p>&copy; 2014 Parth Mehrotra.</p>
 		</footer>
+		<script>
+			$("#container").hide();
+			$("#line").hide();
+			$("footer").hide();
+		</script>
+		<script>
+			$(document).ready(function() {
+				$("#spacer").delay(1000).slideUp("slow", function() {
+					$("#container").fadeIn("slow");
+					$("#line").fadeIn("slow");
+					$("footer").fadeIn("slow");
+				});
+				var $container = $('#container');
+				$container.masonry({
+					columnWidth: 0,
+					itemSelector: '.item',
+					isFitWidth: true
+				});
+			});
+		</script>
 	</body>
 </html>

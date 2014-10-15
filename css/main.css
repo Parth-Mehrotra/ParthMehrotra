@@ -2,11 +2,14 @@ html {
 	background-color: #383a3d;
 }
 
+#spacer {
+	margin: 15% auto 0;
+}
 #propic {
 	display: block;
 	max-width: 150px;
 	border-radius: 100%;
-	margin: 15% auto 0;
+	margin: 20px auto 0;
 }
 
 header h1 {
@@ -61,5 +64,19 @@ footer {
 	font-size: 0.75em;
 	text-align: center;
 	clear: both;
-	padding-top: 175px;
+}
+
+.item {
+	width: 200px;
+	height: 200px;
+	background: none;
+	margin: 20px;
+}
+
+.item img {
+	border-radius: 20%;
+}
+
+#container {
+	margin: 0 auto;
 }
