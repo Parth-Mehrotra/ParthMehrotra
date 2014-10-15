@@ -67,13 +67,15 @@ footer {
 }
 
 .item {
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	background: none;
 	margin: 20px;
 }
 
 .item img {
+	width: 150px;
+	height: 150px;
 	border-radius: 20%;
 }
 
