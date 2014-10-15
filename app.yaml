@@ -12,7 +12,17 @@ handlers:
 - url: /js
   static_dir: js
 
-# access the static resources in the root director
+- url: /commingsoon1
+  static_files: commingsoon1.html
+  upload: commingsoon1.html
+
+- url: /commingsoon2
+  static_files: commingsoon2.html
+  upload: commingsoon2.html
+
+- url: /plexx
+  static_files: plexx.html
+  upload: plexx.html
 
 - url: /(.*)
   static_files: \1
