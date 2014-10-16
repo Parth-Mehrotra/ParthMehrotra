@@ -47,6 +47,9 @@ handlers:
   static_files: martialartsscorekeeper.html
   upload: martialartsscorekeeper.html
 
+- url: /owl-carousel
+  static_dir: owl-carousel
+
 - url: /(.*)
   static_files: \1
   upload: (.*)

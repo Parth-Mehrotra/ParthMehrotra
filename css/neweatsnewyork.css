@@ -4,10 +4,10 @@ html {
 
 body {
 	margin-top: 50px;
-	background: #fffac2;
+	background: #f6f6f6;
 	margin-left: 15%;
 	margin-right: 15%;
-	padding-bottom: 400px;
+	padding-bottom: 100px;
 	border-radius: 50px;
 	padding-top: 30px;
 }
@@ -16,4 +16,19 @@ img {
 	float: left;
 	display: inline;
 	margin-left: 10%;
+}
+
+div {
+	margin-left: 10%;
+}
+
+h1, h2, p {
+	color: black;
+}
+
+p {
+	clear: both;
+	padding-left: 10%;
+	padding-right: 10%;
+	font-size: 150%;
 }
