@@ -23,20 +23,74 @@
 		</header>
 		
 		<section>
-			<div id="projectContainer" class="card">
-				<div id="projectBar" class="cardBar" onclick="toggleCard(this)">
+			<div class="card">
+				<div class="cardBar" onclick="toggleCard(this)">
 					<h2 class="cardTitle">Projects</h2>
 					<img class="cardImage" src="img/down.png" alt="down arrow">
 				</div>
 				<div id="projectContent" class="cardContent">
 					<div class="grid" id="projectGrid">
-						<div class="gridItem"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
 						<div class="gridItem"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
 						<div class="gridItem"><a class="needsBorder" target="_blank" href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
-						<div class="gridItem"><a class="needsBorder" target="_blank" href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
 						<div class="gridItem"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
 						<div class="gridItem"><a target="_blank" href="comingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
 						<div class="gridItem"><a target="_blank" href="comingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
+					</div>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="cardBar" onclick="toggleCard(this)">
+					<h2 class="cardTitle">Experience</h2>
+					<img class="cardImage" src="img/down.png" alt="down arrow">
+				</div>
+				<div id="projectContent" class="cardContent">
+					<div class="grid" id="experienceGrid">
+						<div class="gridItem"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
+					</div>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="cardBar" onclick="toggleCard(this)">
+					<h2 class="cardTitle">Skills</h2>
+					<img class="cardImage" src="img/down.png" alt="down arrow">
+				</div>
+				<div id="projectContent" class="cardContent">
+					<div class="grid" id="skillsGrid">
+						<div class="gridItem"><a class="needsBorder" target="_blank" href="#"><img src="img/android.jpg" alt="Android"></a></div>
+						<div class="gridItem"><a class="needsBorder" target="_blank" href="#"><img src="img/java.jpg" alt="Java"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/google.jpg" alt="Google"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/wear.jpg" alt="Android Wear"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/glass.jpg" alt="Google Glass"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/git.jpg" alt="Git"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/pi.jpg" alt="Raspberry Pi"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/arduino.jpg" alt="Arduino"></a></div>
+					</div>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="cardBar" onclick="toggleCard(this)">
+					<h2 class="cardTitle">Education</h2>
+					<img class="cardImage" src="img/down.png" alt="down arrow">
+				</div>
+				<div id="projectContent" class="cardContent">
+					<div class="grid" id="educationGrid">
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/rutgers.jpg" alt="Rutgers"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/marakana.jpg" alt="Marakana"></a></div>
+					</div>	
+				</div>
+			</div>
+			<div class="card">
+				<div class="cardBar" onclick="toggleCard(this)">
+					<h2 class="cardTitle">Contact</h2>
+					<img class="cardImage" src="img/down.png" alt="down arrow">
+				</div>
+				<div id="projectContent" class="cardContent">
+					<div class="grid" id="contactGrid">
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/googleplus.jpg" alt="Google Plus"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/twitter.jpg" alt="Twitter"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/instagram.jpg" alt="Instagram"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/facebook.jpg" alt="Facebook"></a></div>
+						<div class="gridItem"><a target="_blank" href="#"><img src="img/linkedin.jpg" alt="LinkedIn"></a></div>
 					</div>	
 				</div>
 			</div>
@@ -59,8 +113,36 @@
 					$("footer").fadeIn("");
 					$("section").css("margin-top", "55px");
 
-					var $container = $('#projectGrid');
-					$container.masonry({
+					var $projectContainer = $('#projectGrid');
+					$projectContainer.masonry({
+						columnWidth: 0,
+						itemSelector: '.gridItem',
+						isFitWidth: true
+					});
+
+					var $experienceContainer = $('#experienceGrid');
+					$experienceContainer.masonry({
+						columnWidth: 0,
+						itemSelector: '.gridItem',
+						isFitWidth: true
+					});
+					
+					var $skillsContainer = $('#skillsGrid');
+					$skillsContainer.masonry({
+						columnWidth: 0,
+						itemSelector: '.gridItem',
+						isFitWidth: true
+					});
+					
+					var $educationContainer = $('#educationGrid');
+					$educationContainer.masonry({
+						columnWidth: 0,
+						itemSelector: '.gridItem',
+						isFitWidth: true
+					});
+
+					var $contactContainer = $('#contactGrid');
+					$contactContainer.masonry({
 						columnWidth: 0,
 						itemSelector: '.gridItem',
 						isFitWidth: true
