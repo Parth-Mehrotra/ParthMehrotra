@@ -24,7 +24,7 @@
 		
 		<section>
 			<div id="projectContainer" class="card">
-				<div id="projectBar" class="cardBar">
+				<div id="projectBar" class="cardBar" onclick="toggleCard(this)">
 					<h2 class="cardTitle">Projects</h2>
 					<img class="cardImage" src="img/down.png" alt="down arrow">
 				</div>
@@ -68,6 +68,11 @@
 				});
 
 			});
+
+			function toggleCard(element) {
+				$(element).next().slideToggle();
+				$(element).children(".cardImage").transition({rotate:'+=180deg'});
+			}
 		</script>
 	</body>
 </html>
