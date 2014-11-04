@@ -13,14 +13,14 @@ handlers:
   static_dir: js
 
 #6
-- url: /commingsoon1
-  static_files: commingsoon1.html
-  upload: commingsoon1.html
+- url: /comingsoon1
+  static_files: comingsoon1.html
+  upload: comingsoon1.html
 
 #5
-- url: /commingsoon2
-  static_files: commingsoon2.html
-  upload: commingsoon2.html
+- url: /comingsoon2
+  static_files: comingsoon2.html
+  upload: comingsoon2.html
 
 #4
 - url: /plexx
@@ -46,9 +46,6 @@ handlers:
 - url: /martialartsscorekeeper
   static_files: martialartsscorekeeper.html
   upload: martialartsscorekeeper.html
-
-- url: /owl-carousel
-  static_dir: owl-carousel
 
 - url: /(.*)
   static_files: \1
