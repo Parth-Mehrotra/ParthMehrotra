@@ -1,11 +1,12 @@
 html, body {
 	min-width: 100%;
 	min-height: 100%;
+	background: #069BDE;
 }
 
 /*Header*/
 header {
-	background: #2196F3;
+	background: #03A9F4;
 	width: 100vw;
 	height: 100vh;
 	line-height: 100vh;
@@ -35,6 +36,13 @@ header #search {
 	display: inline;
 	vertical-align: middle;
 	margin-left: 8%;
+}
+
+/*Main Section*/
+section {
+	max-width: 900px;
+	margin: 0 auto;
+	background: #E3F2FD;
 }
 
 /*Grid for the apps*/
