@@ -23,17 +23,22 @@
 		</header>
 		
 		<section>
-			<div id="projectContainer">
-				<h2>Projects</h2>
-				<div id="container">
-					<div class="item"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
-					<div class="item"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
-					<div class="item"><a target="_blank" href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
-					<div class="item"><a target="_blank" href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
-					<div class="item"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
-					<div class="item"><a target="_blank" href="comingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
-					<div class="item"><a target="_blank" href="comingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
-				</div>	
+			<div id="projectContainer" class="card">
+				<div id="projectBar" class="cardBar">
+					<h2 class="cardTitle">Projects</h2>
+					<img class="cardImage" src="img/down.png" alt="down arrow">
+				</div>
+				<div id="projectContent" class="cardContent">
+					<div class="grid" id="projectGrid">
+						<div class="gridItem"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
+						<div class="gridItem"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
+						<div class="gridItem"><a class="needsBorder" target="_blank" href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
+						<div class="gridItem"><a class="needsBorder" target="_blank" href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
+						<div class="gridItem"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
+						<div class="gridItem"><a target="_blank" href="comingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
+						<div class="gridItem"><a target="_blank" href="comingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
+					</div>	
+				</div>
 			</div>
 		</section>
 		<footer>
@@ -54,10 +59,10 @@
 					$("footer").fadeIn("");
 					$("section").css("margin-top", "55px");
 
-					var $container = $('#container');
+					var $container = $('#projectGrid');
 					$container.masonry({
 						columnWidth: 0,
-						itemSelector: '.item',
+						itemSelector: '.gridItem',
 						isFitWidth: true
 					});
 				});
