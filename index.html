@@ -11,48 +11,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<div id="main-container">
-			<div id="spacer">
-			</div>
-			<header>
+		<div id="spacer">
+		</div>
+		<header>
 				<img src="img/parthmehrotra.jpg" alt="Picture of Parth Mehrotra" id="propic" >
-				<h1>Parth Mehrotra</h1>
-			</header>
-			<div id="container">
-				<div class="item"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
-				<div class="item"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
-				<div class="item"><a target="_blank" href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
-				<div class="item"><a target="_blank" href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
-				<div class="item"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
-				<div class="item"><a target="_blank" href="comingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
-				<div class="item"><a target="_blank" href="comingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
-			</div>	
-			<div id="footer">
-				<hr id="line">
-				<footer>
-					<p>&copy; 2014 Parth Mehrotra.</p>
-				</footer>
+				<h1 id="name">Parth Mehrotra</h1>
+				<img src="img/search.png" alt="search icon" id="search">
 				<script>
-					$("#container").hide();
-					$("#line").hide();
-					$("footer").hide();
+					$("#propic").css('visibility', 'hidden');
+					$("#search").css('visibility', 'hidden');
 				</script>
-			</div>
+		</header>
+		<div id="container">
+			<div class="item"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
+			<div class="item"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png" alt="SinfulColors Android App"></a></div>
+			<div class="item"><a target="_blank" href="neweatsnewyork"><img src="img/nen.png" alt="New Eats New York Android App"></a></div>
+			<div class="item"><a target="_blank" href="skylight1"><img src="img/sky.png" alt="Skylight1 Android Study group"></a></div>
+			<div class="item"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png" alt="Matrial Arts Score Keeper Android App"></a></div>
+			<div class="item"><a target="_blank" href="comingsoon1"><img src="img/nbk.png" alt="no information is available about this project at this time"></a></div>
+			<div class="item"><a target="_blank" href="comingsoon2"><img src="img/jpr.png" alt="no information is available about this project at this time"></a></div>
+		</div>	
+		<div id="footer">
+			<hr id="line">
+			<footer>
+				<p>&copy; 2014 Parth Mehrotra.</p>
+			</footer>
 			<script>
-				$(document).ready(function() {
-					$("#spacer").delay(1000).slideUp("slow", function() {
-						$("#container").fadeIn("slow");
-						$("#line").fadeIn("slow");
-						$("footer").fadeIn("slow");
-					});
-					var $container = $('#container');
-					$container.masonry({
-						columnWidth: 0,
-						itemSelector: '.item',
-						isFitWidth: true
-					});
-				});
+				$("#container").hide();
+				$("#line").hide();
+				$("footer").hide();
 			</script>
 		</div>
+		<script>
+			$(document).ready(function() {
+				$("header").delay(1000).animate({
+					height: "150px",
+					'line-height': '150px'
+				}, 1500, function() {
+					$('#propic').css('visibility', 'visible').hide().fadeIn();
+					$('#search').css('visibility', 'visible').hide().fadeIn();
+					$("#container").fadeIn("");
+					$("#line").fadeIn("");
+					$("footer").fadeIn("");
+				});
+
+				var $container = $('#container');
+				$container.masonry({
+					columnWidth: 0,
+					itemSelector: '.item',
+					isFitWidth: true
+				});
+			});
+		</script>
 	</body>
 </html>
