@@ -1,7 +1,9 @@
 html, body {
     min-width: 100%;
     min-height: 100%;
-    background: #069BDE;
+    background: #d5d5d5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 /*Header*/
@@ -11,6 +13,7 @@ header {
     height: 100vh;
     line-height: 100vh;
     text-align: center;
+    font-weight: bold;
 }
 
 header #propic {
@@ -47,8 +50,8 @@ section {
 }
 
 .card {
-    background: #EDEDED;
-    box-shadow: 1px 1px 1px #000000;
+    background: #ffffff;
+    box-shadow: 0 2px 3px #aaa;
     border-radius: 3.5px;
     margin-bottom: 15px;
 }
@@ -62,6 +65,7 @@ section {
     display: inline;
     vertical-align: middle;
     margin-left: 5%;
+    font-weight: lighter;
 }
 
 .cardImage {
