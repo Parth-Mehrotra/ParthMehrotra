@@ -49,9 +49,6 @@
             </div>
 
         </div>
-        <div class="cardExpand" onclick="toggleCard(this, 0)">
-            <h3>...</h3>
-        </div>
     </div>
     <div id="card-1" class="card">
         <div class="cardBar">
@@ -86,9 +83,6 @@
                 <div class="gridItem"><a target="_blank" href="#"><img src="img/arduino.jpg" alt="Arduino"></a></div>
             </div>
         </div>
-        <div class="cardExpand" onclick="toggleCard(this, 2)">
-            <h3>...</h3>
-        </div>
     </div>
     <div id="card-3" class="card">
         <div class="cardBar">
@@ -118,9 +112,6 @@
                 <div class="gridItem"><a target="_blank" href="#"><img src="img/linkedin.jpg" alt="LinkedIn"></a></div>
             </div>
         </div>
-        <div class="cardExpand" onclick="toggleCard(this, 4)">
-            <h3>...</h3>
-        </div>
     </div>
 </section>
 <script>
@@ -138,17 +129,15 @@
             'line-height': '15vh'
         }, 1500, function () {
             $('#propic').css('visibility', 'visible').hide().fadeIn();
-            $('#search').css('visibility', 'visible').hide().fadeIn();
             $("section").fadeIn();
-            $("footer").fadeIn();
 
             for (var i = 0; i < gridId.length; i++) {
                 updateMasonry($(gridId[i]), '.gridItem', true);
             }
             updateMasonry($content, '.card', false);
             masonryData = $content.masonry('getItemElements');
+            $content.masonry({isFitWidth: true});
         });
-
     });
 
     function toggleCard(element, n) {
@@ -195,11 +184,16 @@
             isFitWidth: fitWidth
         });
     }
+    function updateMasonry($element, selector, fitWidth, columnWidth) {
+        $element.masonry({
+            columnWidth: columnWidth,
+            itemSelector: selector,
+            isFitWidth: fitWidth
+        });
+    }
 
     function beforeLoading() {
         $("section").hide();
-        $("#line").hide();
-        $("footer").hide();
     }
 
     function hideAllBut(n) {
