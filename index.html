@@ -6,219 +6,113 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/jquery.transit.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<header>
-    <img src="img/parthmehrotra.jpg" alt="Picture of Parth Mehrotra" id="propic">
-
-    <h1 id="name">Parth Mehrotra</h1>
-    <img src="img/search.png" alt="search icon" id="search">
-    <script>
-        $("#propic").css('visibility', 'hidden');
-        $("#search").css('visibility', 'hidden');
-    </script>
-</header>
-
-<section>
-    <div id="card-0" class="card">
-        <div class="cardBar">
-            <h2 class="cardTitle">Projects</h2>
-
-        </div>
-        <div class="cardContent">
-            <div class="grid" id="projectGrid">
-                <div class="gridItem"><a target="_blank" href="sinfulcolors"><img src="img/sfc.png"
-                                                                                  alt="SinfulColors Android App"></a>
-                </div>
-                <div class="gridItem"><a class="needsBorder" target="_blank" href="neweatsnewyork"><img
-                        src="img/nen.png" alt="New Eats New York Android App"></a></div>
-                <div class="gridItem"><a target="_blank" href="martialartsscorekeeper"><img src="img/mas.png"
-                                                                                            alt="Matrial Arts Score Keeper Android App"></a>
-                </div>
-                <div class="gridItem"><a target="_blank" href="comingsoon1"><img src="img/nbk.png"
-                                                                                 alt="no information is available about this project at this time"></a>
-                </div>
-                <div class="gridItem"><a target="_blank" href="comingsoon2"><img src="img/jpr.png"
-                                                                                 alt="no information is available about this project at this time"></a>
-                </div>
-            </div>
-
-        </div>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Timeline</h1>
     </div>
-    <div id="card-1" class="card">
-        <div class="cardBar">
-            <h2 class="cardTitle">Experience</h2>
-
-        </div>
-        <div class="cardContent">
-            <div class="grid" id="experienceGrid">
-                <div class="gridItem"><a target="_blank" href="plexx"><img src="img/plx.png" alt="Plexx"></a></div>
-                <div class="gridItem"><a class="needsBorder" target="_blank" href="skylight1"><img src="img/sky.png"
-                                                                                                   alt="Skylight1 Android Study group"></a>
-                </div>
-
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
             </div>
-        </div>
-    </div>
-    <div id="card-2" class="card">
-        <div class="cardBar">
-            <h2 class="cardTitle">Skills</h2>
-        </div>
-        <div class="cardContent">
-            <div class="grid" id="skillsGrid">
-                <div class="gridItem"><a class="needsBorder" target="_blank" href="#"><img src="img/android.jpg"
-                                                                                           alt="Android"></a></div>
-                <div class="gridItem"><a class="needsBorder" target="_blank" href="#"><img src="img/java.jpg"
-                                                                                           alt="Java"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/google.jpg" alt="Google"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/wear.jpg" alt="Android Wear"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/glass.jpg" alt="Google Glass"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/git.jpg" alt="Git"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/pi.jpg" alt="Raspberry Pi"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/arduino.jpg" alt="Arduino"></a></div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
             </div>
-        </div>
-    </div>
-    <div id="card-3" class="card">
-        <div class="cardBar">
-            <h2 class="cardTitle">Education</h2>
-
-        </div>
-        <div class="cardContent">
-            <div class="grid" id="educationGrid">
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/rutgers.jpg" alt="Rutgers"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/marakana.jpg" alt="Marakana"></a></div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
             </div>
-        </div>
-    </div>
-    <div id="card-4" class="card">
-        <div class="cardBar">
-            <h2 class="cardTitle">Contact</h2>
-
-        </div>
-        <div class="cardContent">
-            <div class="grid" id="contactGrid">
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/googleplus.jpg" alt="Google Plus"></a>
-                </div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/twitter.jpg" alt="Twitter"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                </div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/facebook.jpg" alt="Facebook"></a></div>
-                <div class="gridItem"><a target="_blank" href="#"><img src="img/linkedin.jpg" alt="LinkedIn"></a></div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
             </div>
-        </div>
-    </div>
-</section>
-<script>
-    beforeLoading();
-    var $content = $('section');
-    var masonryData;
-    var gridId = $.makeArray(document.getElementsByClassName("grid"));
-    var togglable = [true, false, true, false, true];
-    var toggled = [false, false, false, false, false];
-    var sizeChange = [[80, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]];
-
-    $(document).ready(function () {
-        $("header").delay(1000).animate({
-            height: "15vh",
-            'line-height': '15vh'
-        }, 1500, function () {
-            $('#propic').css('visibility', 'visible').hide().fadeIn();
-            $("section").fadeIn();
-
-            for (var i = 0; i < gridId.length; i++) {
-                updateMasonry($(gridId[i]), '.gridItem', true);
-            }
-            updateMasonry($content, '.card', false);
-            masonryData = $content.masonry('getItemElements');
-            $content.masonry({isFitWidth: true});
-        });
-    });
-
-    function toggleCard(element, n) {
-        console.log(toggled);
-        if (!toggled[n]) {
-            $("#card-" + n).animate({
-                        width: "+=160"
-                    }, 400, function () {
-
-                        $("#card-" + n + " .cardExpand").slideToggle();
-
-                        $(gridId[n]).width($(gridId[n]).width() + 160);
-                        updateMasonry($(gridId[n]), '.gridItem', true);
-                        for (var i = 0; i < toggled.length; i++) {
-                            if (toggled[i]) {
-                                toggleCard(element, i);
-                            }
-                        }
-                        updateMasonry($content, '.card', false);
-                        toggled[n] = true;
-                    }
-            );
-        }
-        else {
-            $("#card-" + n).animate({
-                width: "-=160"
-            }, 400, function () {
-                $("#card-" + n + " .cardExpand").slideToggle();
-
-                $(gridId[n]).width($(gridId[n]).width() - 160);
-
-                updateMasonry($(gridId[n]), '.gridItem', true);
-                updateMasonry($content, '.card', false);
-                toggled[n] = false;
-            });
-        }
-        console.log(toggled);
-    }
-
-    function updateMasonry($element, selector, fitWidth) {
-        $element.masonry({
-            columnWidth: 0,
-            itemSelector: selector,
-            isFitWidth: fitWidth
-        });
-    }
-    function updateMasonry($element, selector, fitWidth, columnWidth) {
-        $element.masonry({
-            columnWidth: columnWidth,
-            itemSelector: selector,
-            isFitWidth: fitWidth
-        });
-    }
-
-    function beforeLoading() {
-        $("section").hide();
-    }
-
-    function hideAllBut(n) {
-        for (var i = 0; i < masonryData.length; i++) {
-            if (i !== n) {
-                $content.masonry('hide', [$(masonryData[i])]);
-            }
-        }
-        updateLayout();
-    }
-
-    function revealAll() {
-        for (var i = 0; i < masonryData.length; i++) {
-            $content.masonry('reveal', [masonryData[i]]);
-        }
-    }
-
-
-    function updateLayout() {
-        updateMasonry($content, '.card', false);
-    }
-
-    function updateCards($element) {
-        updateMasonry($element, '.gridItem', true);
-    }
-</script>
-</body>
-</html>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+              <hr>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
