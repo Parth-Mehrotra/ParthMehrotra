@@ -1,192 +1,360 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Hi, I'm Parth</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/jquery.transit.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<div class="container">
-    <div class="page-header">
-        <h1 id="timeline">Parth Mehrotra</h1>
-    </div>
-    <div
-    <ul class="timeline">
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Internship at SAP</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> August 2015</small></p>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Timeline (responsive) - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <style type="text/css">
+            .timeline {
+            list-style: none;
+            padding: 20px 0 20px;
+            position: relative;
+            }
+            .timeline:before {
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #eeeeee;
+            left: 50%;
+            margin-left: -1.5px;
+            }
+            .timeline > li {
+            margin-bottom: 20px;
+            position: relative;
+            }
+            .timeline > li:before,
+            .timeline > li:after {
+            content: " ";
+            display: table;
+            }
+            .timeline > li:after {
+            clear: both;
+            }
+            .timeline > li:before,
+            .timeline > li:after {
+            content: " ";
+            display: table;
+            }
+            .timeline > li:after {
+            clear: both;
+            }
+            .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            }
+            .timeline > li > .timeline-panel:before {
+            position: absolute;
+            top: 26px;
+            right: -15px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 15px solid #ccc;
+            border-right: 0 solid #ccc;
+            border-bottom: 15px solid transparent;
+            content: " ";
+            }
+            .timeline > li > .timeline-panel:after {
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 14px solid #fff;
+            border-right: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+            }
+            .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            }
+            .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+            }
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+            }
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+            }
+            .timeline-badge.primary {
+            background-color: #2e6da4 !important;
+            }
+            .timeline-badge.success {
+            background-color: #3f903f !important;
+            }
+            .timeline-badge.warning {
+            background-color: #f0ad4e !important;
+            }
+            .timeline-badge.danger {
+            background-color: #d9534f !important;
+            }
+            .timeline-badge.info {
+            background-color: #5bc0de !important;
+            }
+            .timeline-title {
+            margin-top: 0;
+            color: inherit;
+            }
+            .timeline-body > p,
+            .timeline-body > ul {
+            margin-bottom: 0;
+            }
+            .timeline-body > p + p {
+            margin-top: 5px;
+            }
+            @media (max-width: 767px) {
+            ul.timeline:before {
+            left: 40px;
+            }
+            ul.timeline > li > .timeline-panel {
+            width: calc(100% - 90px);
+            width: -moz-calc(100% - 90px);
+            width: -webkit-calc(100% - 90px);
+            }
+            ul.timeline > li > .timeline-badge {
+            left: 15px;
+            margin-left: 0;
+            top: 16px;
+            }
+            ul.timeline > li > .timeline-panel {
+            float: right;
+            }
+            ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+            }
+            ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+            }
+            }
+        </style>
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            window.alert = function(){};
+            var defaultCSS = document.getElementById('bootstrap-css');
+            function changeCSS(css){
+                if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+                else $('head > link').filter(':first').replaceWith(defaultCSS); 
+            }
+            $( document ).ready(function() {
+              var iframe_height = parseInt($('html').height()); 
+              window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1 id="timeline">Parth Mehrotra</h1>
             </div>
-            <div class="timeline-body">
-              <p>This summer I'm looking forward to an Internship at SAP.</p>
-            </div>
-          </div>
-        </li>
-
-       <li>
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Formed DriveAI</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> November 2014</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>At DriveAI, we're attempting to make autonomous vehicles a reality. We're implementing innovative ways to lower the costs of autonomous vehicles, and attemting to making the technology more accessible to the general public.</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Software Consultant for Derivative/D</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> September 2014</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>Derivative/D is a company that attempts to make the shipping process easier for young organizations. At Derivative/D I work on several web frameworks, such as the Flask, and Celery, as well as the Google App Engine Platform.</p>
-            </div>
-          </div>
-        </li>
-       <li>
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Began Undergraduate Education</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-education"></i> August 2014</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>In the Fall of 2014, I began my Undergraduate Education. I hope to graduate in 3 years with a Major in Computer Science and a Minor in Statistics.</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-credit-card"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Graduated From Wayne Hills High School</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> September 2014</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>In the summer of 2014 I completed 4 enjoyable years at Wayne Hills High School. During this time I was a member of the Varsity Swim Team, and participated in the Marching Band. I also pursued Martial Arts outside of school, by learning and teaching Tae Kwon Do, Brazilian Jui Jitzu, and Mixed Martial Arts. </p>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Mobile Software Consultant for Revlon</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Febuary 2014</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>As a Mobile Software Consultant for Revlon I created an Android app that utilizes a consumer's phone camera to take a picture of an outfit. The app allows the user to select a color from the picture. After the user selects the color they wish to match, the app uses the Color Lab Space algorithm to suggest appropriate nail polishes.</p>
-              <p>This app uses Android's camera API, SQLite, and the Color Lab Space algorithm.</p>
-              <p>A patent has been filed by SinfulColors, naming me as the inventor.</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Internship at Plexx</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> June 2013</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>Plexx is a company dedicated to helping unemployed and underemployed people find jobs. While I was working at Plexx I worked on an Android app, and contributed to a website that helped undemployed people and underemployed people find the nearest career center, pick a field they are interested, and receive training specific to that field. Plexx alowed career centers to monitor all the people they are trying to help, and contact them if the need arises.</p>
-              <p>During my work at Plexx, I contributed to an Android App and Website that interfaced with Amazon Web Services and Parse. I also had the opportunity to goto career centers, and interview people seeking jobs in order to improve the user experience. We held many focus groups to understand the unique needs of the demographic we were targeting.</p>
-              <p>While I was working at Plexx, they were affiliated with the Blue Ridge Foundation, an incubator targeting social inovation. This was a fantastic learning experience that helped me understand many of the problems that tech startups face, and some of the best practices for dealing with those issues.</p>
-              <p>You can read more about Plexx and their efforts at http://www.plexx.co/about/</p>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Project Launch with Skylight1</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> January 2013</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>An open sourced Android app that recommends NYC restaurants based on your location and cuisine preferences at meal times each day of the week.</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Contributor at Skylight1</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>December 2012</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>Skylight1 is an open source Java mobile projects framework and collection of Android applications and demos. This group started in Feb 2009 as part of the NYCJava Java User Group with the revenue from the project's initial applications going to the NYPC Users Group, a 501c3 educational non-profit.
-              </p>
-              <p>
-              I joined Skylight1 in the winter of 2012. Being an active member at Skylight1 has taught me a lot about best practices in Android and Open-Source. While on Skylight1, I've had the opportunity to collaborate with members on projects that utilize Android, Google Glass, and Google Wear technologies.
-              </p>
-              <p>
-              Check out Skylight1's Google Code or Github.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Completed Android Bootcamp taught by Mark Murphy</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> June 2012</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>After launching my first Android Application, I fell in love with the platform, I craved more information, so over the summer of 2012 I attended Mark Murphy's Android Bootcamp. This was an event hosted by Marakana, a company that's currently working with Twitter to build Twitter University</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">Launched first Android App</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2009</small></p>
-            </div>
-            <div class="timeline-body">
-                <p>
-                Simple Android app that replaces the traditional scoring technologies that cost thousands of dollars and are not accessible to all schools.
-                </p>
-                <p>
-                This was my first project on the Android Platform. Using resources such as Google's Developer Documentation, Vogella, and Marakana I taught myself everything I would need to know to begin Android Developement.
-                </p>
-                <p>
-                You can check out the app on the Play Store.
-                </p>
-                This app was included in top 5 Martial Arts apps, twice
-                <p>
-                Wim Demeere's Blog
-                TECHsling
-                </p>
-            </div>
-          </div>
-        </li>
-    </ul>
-</div>
+            <ul class="timeline">
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://http://go.sap.com/index.html">SAP</a></h4>
+                            <h5>Software Internship</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> August 2015</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>This summer I'm looking forward to an Internship at <a href="http://http://go.sap.com/index.html">SAP</a>.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://driveai.com">DriveAI</a></h4>
+                            <h5>CEO</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> November 2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>At <a href="http://driveai.com">DriveAI</a>, we're attempting to make autonomous vehicles a reality. We're implementing innovative ways to lower the costs of autonomous vehicles, and attemting to making the technology more accessible to the general public.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://derivatived.com">Derivative/D</a></h4>
+                            <h5>Software Consultant</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> September 2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p><a href="http://derivatived.com">Derivative/D</a> is a company that attempts to make the shipping process easier for young organizations. At <a href="http://derivatived.com">Derivative/D</a> I work on several web frameworks, such as the <a href="http://flask.pocoo.org/">Flask</a>, and <a href="http://www.celeryproject.org/">Celery</a>, as well as the <a href="https://cloud.google.com/appengine/docs">Google App Engine Platform.</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://www.rutgers.edu/">Rutgers University</a></h4>
+                            <h5>Began Undergraduate Education</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-education"></i> August 2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>In the Fall of 2014, I began my Undergraduate Education. I hope to graduate in 3 years with a Major in <a href="https://www.cs.rutgers.edu/">Computer Science</a> and a Minor in <a href="http://www.stat.rutgers.edu/">Statistics</a>.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://wh.wayneschools.com/">Wayne Hills High School</a></h4>
+                            <h5>Finished high school education</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-briefcase"></i> September 2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>In the summer of 2014 I completed 4 enjoyable years at <a href="http://wh.wayneschools.com/">Wayne Hills High School</a>. During this time I was a member of the Varsity Swim Team, and participated in the Marching Band. I also pursued Martial Arts outside of school, by learning and teaching Tae Kwon Do, Brazilian Jui Jitzu, and Mixed Martial Arts. </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://revlon.com">Revlon</a></h4>
+                            <h5>Mobile Software Consultant</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Febuary 2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>As a Mobile Software Consultant for <a href="http://revlon.com">Revlon</a> I created an Android app that utilizes a consumer's phone camera to take a picture of an outfit. The app allows the user to select a color from the picture. After the user selects the color they wish to match, the app uses the <a href="http://en.wikipedia.org/wiki/Lab_color_space">Color Lab Space algorithm</a> to suggest appropriate nail polishes.</p>
+                            <p>This app uses <a href="http://developer.android.com/reference/android/hardware/Camera.html">Android's Camera API</a>, <a href="http://developer.android.com/reference/android/database/sqlite/package-summary.html">SQLite</a>, and the <a href"http://en.wikipedia.org/wiki/Lab_color_space">Color Lab Space algorithm</a>.</p>
+                            <p>A patent has been filed by <a href="http://www.sinfulcolors.com/">SinfulColors</a>, naming me as the inventor.</p>
+                            <p>This project will stop being maintianed in 2016</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://plexx.co">Plexx</a></h4>
+                            <h5>Software Intern</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> June 2013</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p><a href="http://plexx.co">Plexx</a> is a company dedicated to helping unemployed and underemployed people find jobs. While I was working at <a href="http://plexx.co">Plexx</a> I worked on an Android app, and contributed to a website that helped undemployed people and underemployed people find the nearest career center, pick a field they are interested, and receive training specific to that field. <a href="http://plexx.co">Plexx</a> alowed career centers to monitor all the people they are trying to help, and contact them if the need arises.</p>
+                            <p>During my work at <a href="http://plexx.co">Plexx</a>, I contributed to an Android App and Website that interfaced with Amazon Web Services and Parse. I also had the opportunity to goto career centers, and interview people seeking jobs in order to improve the user experience. We held many focus groups to understand the unique needs of the demographic we were targeting.</p>
+                            <p>While I was working at <a href="http://plexx.co">Plexx</a>, they were affiliated with the Blue Ridge Foundation, an incubator targeting social inovation. This was a fantastic learning experience that helped me understand many of the problems that tech startups face, and some of the best practices for dealing with those issues.</p>
+                            <p>You can read more about <a href="http://plexx.co">Plexx</a> and their efforts at <a href="http://wwww.plexx.co/about/">http://www.plexx.co/about/</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="https://play.google.com/store/apps/details?id=org.skylight1.neny.android&hl=en">New Eats New York</a></h4>
+                            <h5>Project launch with <a href="https://code.google.com/p/skylight1/">Skylight1</a></h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> January 2013</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>An open sourced Android app that recommends NYC restaurants based on your location and cuisine preferences at meal times each day of the week.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title"><a href="http://Skylight1.org">Skylight1</a></h4>
+                            <h5>Contributor</h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>December 2012</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p><a href="http://Skylight1.org">Skylight1</a> is an open source Java mobile projects framework and collection of Android applications and demos. This group started in Feb 2009 as part of the NYCJava Java User Group with the revenue from the project's initial applications going to the NYPC Users Group, a 501c3 educational non-profit.
+                            </p>
+                            <p>
+                                I joined <a href="http://Skylight1.org">Skylight1</a> in the winter of 2012. Being an active member at <a href="http://Skylight1.org">Skylight1</a> has taught me a lot about best practices in Android and Open-Source. While on <a href="http://Skylight1.org">Skylight1</a>, I've had the opportunity to collaborate with members on projects that utilize Android, Google Glass, and Google Wear technologies.
+                            </p>
+                            <p>
+                                Check out <a href="http://Skylight1.org">Skylight1</a>'s <a href="https://code.google.com/p/skylight1/source/browse/">Google Code</a> or <a href="https://github.com/skylight1">Github</a>.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-education"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Marakana</h4>
+                            <h5>Completed Android Bootcamp taught by <a href="https://commonsware.com/">Mark Murphy</a></h5>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> June 2012</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>After launching my first Android Application, I fell in love with the platform, I craved more information, so over the summer of 2012 I attended <a href="https://commonsware.com/">Mark Murphy</a>'s Android Bootcamp. This was an event hosted by <a href="http://marakana.com/">Marakana</a>, a company that's currently working with Twitter to build Twitter University</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Launched first Android App</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> October 2009</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                Simple Android app that replaces the traditional scoring technologies that cost thousands of dollars and are not accessible to all schools.
+                            </p>
+                            <p>
+                                This was my first project on the Android Platform. Using resources such as <a href="http://developer.android.com">Google's Developer Documentation</a>, <a href="http://www.vogella.com/">Vogella</a>, and <a href="http://marakana.com/">Marakana</a> I taught myself everything I would need to know to begin Android Developement.
+                            </p>
+                            <p>
+                                You can check out the app on the Play Store.
+                            </p>
+                            This app was included in top 5 Martial Arts apps, twice
+                            <p>
+                            <ul>
+                                <li><a target="_blank" href="http://www.wimsblog.com/2012/03/five-best-free-android-apps-for-martial-artists/">Wim Demeere's Blog</a>
+                                <li><a target="_blank" href="http://www.techsling.com/2012/06/5-best-free-android-apps-for-martial-arts/">TECHsling</a>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
