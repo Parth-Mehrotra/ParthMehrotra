@@ -1,51 +1,16 @@
 application: annular-aria-650
 version: 2
-runtime: php
+runtime: python27
 api_version: 1
+threadsafe: yes
 
 handlers:
-# re-direct to index.html if no path is give
 - url: /
   static_files: index.html
   upload: index.html
 
 - url: /js
   static_dir: js
-
-#6
-- url: /comingsoon1
-  static_files: comingsoon1.html
-  upload: comingsoon1.html
-
-#5
-- url: /comingsoon2
-  static_files: comingsoon2.html
-  upload: comingsoon2.html
-
-#4
-- url: /plexx
-  static_files: plexx.html
-  upload: plexx.html
-
-#3
-- url: /sinfulcolors
-  static_files: sinfulcolors.html
-  upload: sinfulcolors.html
-
-#2
-- url: /neweatsnewyork
-  static_files: neweatsnewyork.html
-  upload: neweatsnewyork.html
-
-#1
-- url: /skylight1
-  static_files: skylight1.html
-  upload: skylight1.html
-
-#0
-- url: /martialartsscorekeeper
-  static_files: martialartsscorekeeper.html
-  upload: martialartsscorekeeper.html
 
 - url: /(.*)
   static_files: \1
