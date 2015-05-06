@@ -8,10 +8,3 @@ handlers:
 - url: /
   static_files: index.html
   upload: index.html
-
-- url: /js
-  static_dir: js
-
-- url: /(.*)
-  static_files: \1
-  upload: (.*)
