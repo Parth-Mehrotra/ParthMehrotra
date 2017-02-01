@@ -5,166 +5,9 @@
 		<title>Parth Mehrotra</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<style type="text/css">
-			.timeline {
-			list-style: none;
-			padding: 20px 0 20px;
-			position: relative;
-			}
-			.timeline:before {
-			top: 0;
-			bottom: 0;
-			position: absolute;
-			content: " ";
-			width: 3px;
-			background-color: #eeeeee;
-			left: 50%;
-			margin-left: -1.5px;
-			}
-			.timeline > li {
-			margin-bottom: 20px;
-			position: relative;
-			}
-			.timeline > li:before,
-			.timeline > li:after {
-			content: " ";
-			display: table;
-			}
-			.timeline > li:after {
-			clear: both;
-			}
-			.timeline > li:before,
-			.timeline > li:after {
-			content: " ";
-			display: table;
-			}
-			.timeline > li:after {
-			clear: both;
-			}
-			.timeline > li > .timeline-panel {
-			width: 46%;
-			float: left;
-			border: 1px solid #d4d4d4;
-			border-radius: 2px;
-			padding: 20px;
-			position: relative;
-			-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-			}
-			.timeline > li > .timeline-panel:before {
-			position: absolute;
-			top: 26px;
-			right: -15px;
-			display: inline-block;
-			border-top: 15px solid transparent;
-			border-left: 15px solid #ccc;
-			border-right: 0 solid #ccc;
-			border-bottom: 15px solid transparent;
-			content: " ";
-			}
-			.timeline > li > .timeline-panel:after {
-			position: absolute;
-			top: 27px;
-			right: -14px;
-			display: inline-block;
-			border-top: 14px solid transparent;
-			border-left: 14px solid #fff;
-			border-right: 0 solid #fff;
-			border-bottom: 14px solid transparent;
-			content: " ";
-			}
-			.timeline > li > .timeline-badge {
-			color: #fff;
-			width: 50px;
-			height: 50px;
-			line-height: 50px;
-			font-size: 1.4em;
-			text-align: center;
-			position: absolute;
-			top: 16px;
-			left: 50%;
-			margin-left: -25px;
-			background-color: #999999;
-			z-index: 100;
-			border-top-right-radius: 50%;
-			border-top-left-radius: 50%;
-			border-bottom-right-radius: 50%;
-			border-bottom-left-radius: 50%;
-			}
-			.timeline > li.timeline-inverted > .timeline-panel {
-			float: right;
-			}
-			.timeline > li.timeline-inverted > .timeline-panel:before {
-			border-left-width: 0;
-			border-right-width: 15px;
-			left: -15px;
-			right: auto;
-			}
-			.timeline > li.timeline-inverted > .timeline-panel:after {
-			border-left-width: 0;
-			border-right-width: 14px;
-			left: -14px;
-			right: auto;
-			}
-			.timeline-badge.primary {
-			background-color: #2e6da4 !important;
-			}
-			.timeline-badge.success {
-			background-color: #3f903f !important;
-			}
-			.timeline-badge.warning {
-			background-color: #f0ad4e !important;
-			}
-			.timeline-badge.danger {
-			background-color: #d9534f !important;
-			}
-			.timeline-badge.info {
-			background-color: #5bc0de !important;
-			}
-			.timeline-title {
-			margin-top: 0;
-			color: inherit;
-			}
-			.timeline-body > p,
-			.timeline-body > ul {
-			margin-bottom: 0;
-			}
-			.timeline-body > p + p {
-			margin-top: 5px;
-			}
-			@media (max-width: 767px) {
-			ul.timeline:before {
-			left: 40px;
-			}
-			ul.timeline > li > .timeline-panel {
-			width: calc(100% - 90px);
-			width: -moz-calc(100% - 90px);
-			width: -webkit-calc(100% - 90px);
-			}
-			ul.timeline > li > .timeline-badge {
-			left: 15px;
-			margin-left: 0;
-			top: 16px;
-			}
-			ul.timeline > li > .timeline-panel {
-			float: right;
-			}
-			ul.timeline > li > .timeline-panel:before {
-			border-left-width: 0;
-			border-right-width: 15px;
-			left: -15px;
-			right: auto;
-			}
-			ul.timeline > li > .timeline-panel:after {
-			border-left-width: 0;
-			border-right-width: 14px;
-			left: -14px;
-			right: auto;
-			}
-			}
-		</style>
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -178,14 +21,28 @@
 	<body>
 		<div class="container">
 			<div class="page-header">
-				<h1 id="timeline">Parth Mehrotra</h1>
+				<h1 id="timeline"><a href="ParthMehrotra.pdf">Parth Mehrotra</a></h1>
 			</div>
 			<ul class="timeline">
+				<li class="timeline-inverted">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+							<h4 class="timeline-title"><a href="https://github.com/Parth-Mehrotra/StaticMapGenerator">Static Maps Libary</a></h4>
+							<h5>Personal Project</h5>
+							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> January 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						<p>A library that makes dealing with the <a href="https://en.wikipedia.org/wiki/Mercator_projection#Mathematics_of_the_Mercator_projection">Math of the Mercator Projection</a> and the Google's <a href="https://en.wikipedia.org/wiki/Mercator_projection#Mathematics_of_the_Mercator_projection">Static Maps Library</a> painless. Can be used in order to get map tiles for geospatial visualizations. </p>
+						</div>
+					</div>
+				</li>
 				<li>
 					<div class="timeline-badge primary"><i class="glyphicon glyphicon-briefcase"></i></div>
 					<div class="timeline-panel">
 						<div class="timeline-heading">
 							<h4 class="timeline-title"><a href="http://quicksetup.me">QuickSetup.me</a></h4>
+							<h5>Personal Project</h5>
 							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> July 2015</small></p>
 						</div>
 						<div class="timeline-body">
@@ -199,10 +56,17 @@
 						<div class="timeline-heading">
 							<h4 class="timeline-title"><a href="http://go.sap.com/index.html">SAP</a></h4>
 							<h5>Software Internship</h5>
-							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> May 2015</small></p>
+							<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> May 2015 - Present</small></p>
 						</div>
 						<div class="timeline-body">
-							<p>In May, I joined the <a href="http://www.sap.com/asset/detail.2014-02-feb.sap-consumer-insight-365-mp4.html">Consumer Insight team</a> at <a href="http://go.sap.com/index.html">SAP</a>. We're building a tool called the <a href="https://www.youtube.com/watch?v=Fb1Zpjjw4gI">Consumer Insight 365</a>. This tool enables market researchers to better understand mobile data.</p>
+							<p>Contributed to several portions of SAP’s Consumer Insight 365 technical stack. CI 365 is a big data solution that allows market researchers to gain unique consumer insights by analyzing terabytes of mobile data at a time.</p>
+							<ul>
+								<li>Front-end Development: Implemented features and fixed bugs in webapp that assists market-researchers form queries. The webapp visualized geo-spatial data by accessing our API.</li>
+								<li>Back-end Development: Implemented new algorithms and features that helped users draw conclusions about different profiles of consumers through our API. </li>
+								<li>Data Science: Wrote machine learning algorithms that helped predict missing attributes of our data. Engineered tools that analyzed the current “health” of our data, by measuring the accuracy of our machine learning models.</li>
+							</ul>
+							<p>Prototyped several ambitious projects in the fields of 2 Factor Authentication, and Code Metrics.</p>
+							<p>Encouraged the use of streamlined communication, documentation repositories, unit testing, and continuous integration.</p>
 						</div>
 					</div>
 				</li>
