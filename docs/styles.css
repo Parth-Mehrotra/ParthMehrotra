@@ -157,4 +157,30 @@ iframe {
         left: -14px;
         right: auto;
     }
+}	
+#menu-outer {
+  background: url(images/bar-bg.jpg) repeat-x;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#timeline {
+    text-align: left;
+    width: 30%;
+}
+
+.table {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul#horizontal-list {
+  list-style: none;
+  padding-top: 20px;
+}
+ul#horizontal-list li {
+}
+
+.menu-item {
+    padding-right: 20px;
 }
